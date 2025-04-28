@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: background-color 1s ease;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2575fc;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    background-color: #6a11cb;
+}
+
+.form-container {
+    background: #f6f3f3;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(218, 192, 192, 0.3);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #1c0f0f;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #1b0606;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f6f2f2;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+textarea {
+    resize: none;
+}
+
+button#submitBtn {
+    padding: 14px;
+    background-color: #2575fc;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button#submitBtn:hover {
+    background-color: #6a11cb;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+    background-color: #e61212;
+}
+
+body.dark-mode .form-container {
+    background: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode label {
+    color: #ccc;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #2c2c2c;
+    color: #eee;
+    border: 1px solid #444;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="theme-toggle">
+        <button id="toggleTheme">🌙 Toggle Theme</button>
+    </div>
+
+    <div class="form-container">
+        <h1>Student Registration Form</h1>
+
+        <form action="/store_data.php" method="POST">
+            <h2>Personal Details</h2>
+
+            <label>First Name</label>
+            <input type="text" name="firstname" placeholder="Enter your first name" required>
+
+            <label>Last Name</label>
+            <input type="text" name="lastname" placeholder="Enter your last name" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password" required>
+
+            <h2>Class Selection</h2>
+            <label><input type="radio" name="class" value="Class XI" required> Class XI</label>
+            <label><input type="radio" name="class" value="Class XII"> Class XII</label>
+
+            <h2>Subjects</h2>
+            <label><input type="checkbox" name="subject[]" value="CSE"> CSE</label>
+            <label><input type="checkbox" name="subject[]" value="Math"> Math</label>
+            <label><input type="checkbox" name="subject[]" value="Chem"> Chemistry</label>
+            <label><input type="checkbox" name="subject[]" value="Phy"> Physics</label>
+
+            <h2>City</h2>
+            <select name="city" required>
+                <option value="">-- Select your city --</option>
+                <option value="Madhuban">Madhuban</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+
+            <h2>Feedback</h2>
+            <textarea name="feedback" placeholder="Please provide your feedback" rows="5"></textarea>
+
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
